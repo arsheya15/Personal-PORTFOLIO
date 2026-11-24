@@ -1,0 +1,565 @@
+/* =========================
+   PINK AESTHETIC PORTFOLIO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-pink: #C44578;
+    --rose: #D85B91;
+    --pastel: #FFF0F5;
+    --light-pink: #FFE0EC;
+    --card-pink: #FFF8FB;
+    --text: #593447;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--pastel);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+nav {
+    background: linear-gradient(
+        90deg,
+        #BD3F76,
+        #D85B91,
+        #E77EAA
+    );
+
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(190, 63, 118, 0.2);
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo::after {
+    content: " ♡";
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFE0EC;
+    text-shadow: 0 0 10px white;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 100px 10%;
+    position: relative;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 38px;
+    color: var(--dark-pink);
+    margin-bottom: 40px;
+}
+
+section h1::after {
+    content: " ✨ ♡";
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 90% 20%,
+        #FFD2E4,
+        transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #FFF0F5,
+        #FAD5E5,
+        #FFF8FB
+        );
+
+    padding: 100px 12%;
+}
+
+#home::before {
+    content: "♡";
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    font-size: 100px;
+    color: rgba(216, 91, 145, 0.18);
+}
+
+#home::after {
+    content: "✧";
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+    font-size: 80px;
+    color: #D85B91;
+}
+
+.home-content {
+    max-width: 750px;
+}
+
+.welcome {
+    color: var(--rose);
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.home-content h1 {
+    text-align: left;
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: #71334F;
+}
+
+.home-content h1 span {
+    color: var(--dark-pink);
+}
+
+.home-content h2 {
+    font-size: 27px;
+    color: var(--rose);
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #C44578,
+        #E77EAA
+    );
+
+    color: white;
+    text-decoration: none;
+
+    padding: 15px 35px;
+    border-radius: 50px;
+
+    font-weight: bold;
+    border: 2px solid transparent;
+
+    box-shadow: 0 7px 20px rgba(196, 69, 120, 0.25);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(196, 69, 120, 0.4);
+    background: #A83265;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about {
+    background: #FFF8FB;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+
+    background: linear-gradient(
+        135deg,
+        #FFE3EE,
+        #FFF0F5
+    );
+
+    padding: 45px;
+    border-radius: 25px;
+
+    border: 1px solid #F5B8D0;
+
+    box-shadow: 0 10px 30px rgba(196, 69, 120, 0.10);
+
+    line-height: 2;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.about-content:hover {
+    transform: translateY(-5px);
+}
+
+.about-content::before {
+    content: "🌸 ♡ ✨";
+    display: block;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+#skills {
+    background: linear-gradient(
+        135deg,
+        #FCE0EC,
+        #FFF0F5
+    );
+}
+
+.skill-container {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.skill-card {
+    background: #FFF9FC;
+
+    padding: 30px;
+    border-radius: 22px;
+
+    text-align: center;
+
+    border: 1px solid #F5C0D5;
+
+    box-shadow: 0 8px 20px rgba(196, 69, 120, 0.10);
+
+    transition: 0.3s;
+}
+
+.skill-card::before {
+    content: "✿";
+    display: block;
+    color: #D85B91;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: #FFE0EC;
+}
+
+.skill-card h3 {
+    color: var(--dark-pink);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.skill-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+#education {
+    background: #FFF8FB;
+}
+
+.education-card {
+    max-width: 750px;
+    margin: 25px auto;
+
+    background: linear-gradient(
+        120deg,
+        #FFE1EC,
+        #FFF5F9
+    );
+
+    padding: 30px;
+
+    border-radius: 20px;
+    border-left: 7px solid #D85B91;
+
+    box-shadow: 0 8px 20px rgba(196, 69, 120, 0.10);
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateX(8px);
+}
+
+.education-card h2 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+#projects {
+    background: linear-gradient(
+        135deg,
+        #FCE0EC,
+        #FFF0F5
+    );
+}
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 30px;
+}
+
+.project-card {
+    background: #FFF9FC;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    border: 1px solid #F4B8D0;
+
+    box-shadow: 0 8px 25px rgba(196, 69, 120, 0.12);
+
+    transition: 0.3s;
+}
+
+.project-card::before {
+    content: "💗 ✨";
+    display: block;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(196, 69, 120, 0.2);
+    background: #FFE6F0;
+}
+
+.project-card h2 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.project-card span {
+    color: #C44578;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    background: #FFF8FB;
+    text-align: center;
+}
+
+#contact > p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    background: #FFE5EF;
+
+    max-width: 650px;
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    border: 1px solid #F2B5CD;
+
+    box-shadow: 0 8px 25px rgba(196, 69, 120, 0.12);
+}
+
+.contact-info p {
+    margin: 20px;
+    font-size: 17px;
+}
+
+#contact .btn {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: linear-gradient(
+        90deg,
+        #BD3F76,
+        #D85B91
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 25px;
+    font-size: 16px;
+}
+
+footer p::after {
+    content: " 💗 ✨";
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+#home::before {
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+
+    #home {
+        padding: 80px 8%;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-content h2 {
+        font-size: 22px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    section h1 {
+        font-size: 30px;
+    }
+
+    .about-content {
+        padding: 25px;
+    }
+
+}
